@@ -1,0 +1,30 @@
+---
+abstract: ~
+author:
+  - '<?= $_[0]->{name} ?><lt><?= $_[0]->{email} ?></gt>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 1.01'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: App-pmtemplate
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  File::HomeDir: 0
+  Getopt::Compact::WithCmd: 0
+  Path::Class: 0
+  Term::ReadLine: 0
+  Text::MicroTemplate: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/hideo55/p5-App-pmtemplate.git
+version: 0.01
