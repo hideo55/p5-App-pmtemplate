@@ -146,19 +146,19 @@ sub create {
 
     my $code   = $mt->code;
     my $render = eval $code or die $@;
-    my $result     = $render->(
+    my $result = $render->(
         {   name         => $config->{name},
             email        => $config->{email},
             package_name => $package_name,
         }
     );
 
-	my $target_dir = dir($opts->{dir});
-	$target_dir->mkpath;
-	my $pmfile = (split '::', $package_name )[-1] . '.pm';
-	my $pmfile_fh = $target_dir->file($pmfile)->openw;
-	print $pmfile_fh $result;
-	close $pmfile_fh;
+    my $target_dir = dir( $opts->{dir} );
+    $target_dir->mkpath;
+    my $pmfile = ( split '::', $package_name )[-1] . '.pm';
+    my $pmfile_fh = $target_dir->file($pmfile)->openw;
+    print $pmfile_fh $result;
+    close $pmfile_fh;
 
 }
 
